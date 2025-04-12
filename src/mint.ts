@@ -1,11 +1,11 @@
-import { mintTo, burn, createBurnInstruction, getOrCreateAssociatedTokenAccount, createAssociatedTokenAccountInstruction, getAssociatedTokenAddressSync } from '@solana/spl-token';
-import { Connection, Keypair, PublicKey, Transaction, SystemProgram, sendAndConfirmTransaction, LAMPORTS_PER_SOL } from '@solana/web3.js';
+import { mintTo, burn, getOrCreateAssociatedTokenAccount } from '@solana/spl-token';
+import { Connection, Keypair, PublicKey, Transaction, SystemProgram, sendAndConfirmTransaction } from '@solana/web3.js';
 import bs58 from 'bs58';
 
 // Environment variables should be validated
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const TOKEN_MINT_ADDRESS = process.env.TOKEN_MINT_ADDRESS;
-const RPC_ENDPOINT = process.env.RPC_ENDPOINT || 'https://api.mainnet-beta.solana.com';
+const RPC_ENDPOINT = process.env.RPC_ENDPOINT || 'https://api.devnet.solana.com';
 const API_KEY = process.env.HELIUS_API_KEY;
 
 // Validate required environment variables
@@ -18,8 +18,8 @@ if (!TOKEN_MINT_ADDRESS) {
 }
 
 // Create connection with API key if provided
-const connection = API_KEY 
-  ? new Connection(`${RPC_ENDPOINT}?api-key=${API_KEY}`) 
+const connection = API_KEY
+  ? new Connection(`${RPC_ENDPOINT}?api-key=${API_KEY}`)
   : new Connection(RPC_ENDPOINT);
 
 /**
@@ -27,6 +27,8 @@ const connection = API_KEY
  * @param bs58PrivateKey The private key in bs58 format
  * @returns Keypair instance
  */
+
+
 function bs58ToKeypair(bs58PrivateKey: string): Keypair {
   try {
     const privateKeyBuffer = bs58.decode(bs58PrivateKey);
@@ -134,7 +136,7 @@ export const nativeToken = async (toAddress: string, amount: number): Promise<st
     }
 
     const toPublicKey = new PublicKey(toAddress);
-    
+
     // Create and sign a transaction to transfer SOL
     const transaction = new Transaction().add(
       SystemProgram.transfer({

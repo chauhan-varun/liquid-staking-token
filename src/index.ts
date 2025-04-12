@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Define your vault address from environment variables or set it directly
-const VAULT_ADDRESS = process.env.VAULT_ADDRESS || '6HQXUSqQ1328Y9XyMBg6UJBpDPLiNGEZTsqhRRm2ZAH4';
+const VAULT_ADDRESS = process.env.VAULT_ADDRESS;
 
 // Define transaction types
 enum TransactionType {
