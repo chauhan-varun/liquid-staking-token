@@ -1,13 +1,24 @@
-## Assignment
-1. Complete the functions in `mintTokens.ts` and `burnTokens.ts` to mint and burn tokens.
-2. Complete the function in `sendNativeTokens.ts` to send native tokens.
-3. Run the server using `npm run start` and test the functionality using the `curl` command.
+# 💧 LiquidStakingToken
 
-## Better approach
-What can be a better approach to this problem?
+LiquidStakingToken is a smart contract-based solution that allows users to participate in staking without locking up their assets. It supports key operations for the **BUND token**, **MINT token**, and **native SOUL token transfers**, making it easy to earn rewards while maintaining token liquidity.
 
-## Hints
- - Can you store all incoming events in a DB?
- - Can you think of what is wrong in line 16 of index.ts?
- - How can you ensure you are not double minting tokens?
- - How can you ensure that you're not burning tokens without sending them to the receiver?
+## 🚀 Features
+
+- ✅ **Stake BUND Token**: Stake your BUND tokens and receive a liquid staking representation.
+- ✅ **Mint Functionality**: Allows authorized minting of staking tokens based on deposits.
+- ✅ **Send Native SOUL**: Enables the sending of the native SOUL token within the staking logic.
+- ✅ **Liquid Staking**: Users can stake and unstake without needing to wait for bonding periods.
+- ✅ **Tokenized Staking Position**: Stakeholders receive a token that represents their staked position, tradable or usable in DeFi.
+
+## 📦 Supported Tokens
+
+- **BUND** – The main staking token for rewards.
+- **MINT** – Represents minted tokens based on BUND deposits.
+- **Native SOUL** – Utility for interacting with the protocol in native chain tokens.
+
+## 🛠️ Installation & Deployment
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/your-username/LiquidStakingToken.git
+   cd LiquidStakingToken
