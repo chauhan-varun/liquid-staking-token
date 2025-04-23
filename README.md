@@ -20,5 +20,5 @@ LiquidStakingToken is a smart contract-based solution that allows users to parti
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/LiquidStakingToken.git
-   cd LiquidStakingToken
+   git clone https://github.com/chauhan-varun/liquid-staking-token.git
+   cd liquid-staking-token
