@@ -1,10 +1,10 @@
 # 💧 LiquidStakingToken in Solana
 
-LiquidStakingToken is a smart contract-based solution that allows users to participate in staking without locking up their assets. It supports key operations for the **BUND token**, **MINT token**, and **native SOL token transfers**, making it easy to earn rewards while maintaining token liquidity.
+LiquidStakingToken is a smart contract-based solution that allows users to participate in staking without locking up their assets. It supports key operations for the **BURN token**, **MINT token**, and **native SOL token transfers**, making it easy to earn rewards while maintaining token liquidity.
 
 ## 🚀 Features
 
-- ✅ **Stake BUND Token**: Stake your BUND tokens and receive a liquid staking representation.
+- ✅ **Stake BURN Token**: Stake your BUND tokens and receive a liquid staking representation.
 - ✅ **Mint Functionality**: Allows authorized minting of staking tokens based on deposits.
 - ✅ **Send Native SOL**: Enables the sending of the native SOUL token within the staking logic.
 - ✅ **Liquid Staking**: Users can stake and unstake without needing to wait for bonding periods.
@@ -12,7 +12,7 @@ LiquidStakingToken is a smart contract-based solution that allows users to parti
 
 ## 📦 Supported Tokens
 
-- **BUND** – The main staking token for rewards.
+- **BURN** – The main staking token for rewards.
 - **MINT** – Represents minted tokens based on BUND deposits.
 - **Native SOL** – Utility for interacting with the protocol in native chain tokens.
 
